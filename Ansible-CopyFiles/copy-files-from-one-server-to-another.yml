@@ -1,0 +1,14 @@
+---
+ 
+- hosts: host-servers
+  become: yes
+
+  tasks: 
+    - name: Copy files from Master server to Host servers
+      copy: 
+        src: /home/host/Ansible/copy-files/test.txt
+        dest: /home/host/Ansible/test.txt 
+        owner: host 
+        group: host
+        mode: "0644"
+        backup: yes
