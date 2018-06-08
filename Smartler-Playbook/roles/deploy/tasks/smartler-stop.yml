@@ -1,0 +1,10 @@
+---
+# This playbook is responsible to stop the Smartler service
+
+- name: Stop "Smartler" service, if running
+  service:
+    name: smartler
+    state: stopped
+
+- pause:
+    seconds: 10

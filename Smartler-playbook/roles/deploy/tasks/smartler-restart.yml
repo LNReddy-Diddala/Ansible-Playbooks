@@ -1,0 +1,7 @@
+---
+# This playbook is responsible to restart the Smartler service.
+
+- name: Restart "Smartler" service, in all cases
+  service:
+    name: smartler
+    state: restarted

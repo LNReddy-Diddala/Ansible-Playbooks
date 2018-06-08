@@ -1,0 +1,5 @@
+---
+# This playbook is responsible to start the execution of the hadlers.
+
+#- include: smartler-restart.yml
+

@@ -1,0 +1,5 @@
+---
+# This playbook is responsible to start the execution of the tasks.
+- include: smartler-stop.yml
+- include: deploy.yml
+- include: smartler-restart.yml
