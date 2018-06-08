@@ -1,6 +1,0 @@
----
-
-- name: Restart "Smartler" service, in all cases
-  service:
-    name: httpd
-    state: restarted

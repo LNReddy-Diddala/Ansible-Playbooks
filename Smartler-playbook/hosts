@@ -1,4 +1,0 @@
-#Add servers here
-[host-servers]
-172.16.0.3 ansible_sudo_pass='host'
-172.16.0.4 ansible_sudo_pass='host'
