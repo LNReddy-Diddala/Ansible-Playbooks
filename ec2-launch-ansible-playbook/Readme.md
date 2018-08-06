@@ -24,6 +24,7 @@ Step-1: Setup required environment that supports to launch EC2 Instance using An
                         export AWS_SECRET_ACCESS_KEY=<aws_secret_access_key>
       
 Step-2: Execute command to run Ansible-Palybook to launch EC2 Instance using Ansible.
+
         $ ansible-playbook site.yml -i hosts
         
         
