@@ -1,0 +1,12 @@
+---
+#group vars for group named as "local" in hosts. @LNReddy-Diddala
+
+instance_type	: t2.micro 								# This is type of instance
+security_group	: ansible-security-group  				# This is the Security Group name that i'm going to cretae in AWS
+image			: ami-759bc50a  						# This is an AMI i created myself
+keypair  		: architects-LNReddy-us-east-1-keypair  # This is one of my keys that i already have in AWS
+vpc_id			: vpc-5a708420							# This is VPC-ID
+region 			: us-east-1 							# You can change the Region
+count 			: 1										# This is represent no.of instances going to launched
+device_name		: /dev/sdb								# This is name of the volume
+volume_size		: 10									# Size of volume
