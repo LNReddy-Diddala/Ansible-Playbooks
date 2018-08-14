@@ -1,7 +1,18 @@
 [local]
 localhost
 
+[webserver:vars]
+ansible_become=true
+ansible_user='ubuntu'
+ansible_become_method='sudo'
+ansible_become_user='root'
+
 [webserver]
+54.86.34.92
+
+
+
+
 
 
 

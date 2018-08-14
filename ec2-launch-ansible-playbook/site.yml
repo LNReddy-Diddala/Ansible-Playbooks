@@ -7,6 +7,7 @@
   tags: provisioning
 
   # Roles that will be used to create Security Group and launch EC2 Instance. @LNReddy-Diddala
+
   roles:
     - create-sg
     - ec2-instance-launch
