@@ -12,13 +12,17 @@
       count: "{{ count }}"
       volumes:
         - device_name: "{{ device_name }}"
+          volume_type: "{{ volume_type }}"
           volume_size: "{{ volume_size }}"
+          delete_on_termination: "{{delete_on_termination}}"
   register: ec2
       
-- name: Add the newly created EC2 instance(s) to the local host group (located inside the directory)
-  add_host:
-    name: "{{ item.public_ip }}"
-    groups: webserver
+- name: Add the newly created EC2 instance(s) to the webserver group (located inside the directory)
+  lineinfile:
+    dest: "/home/msr/MyComputer/DevOps/Ansible/Ansible-Playbooks/ec2-launch-ansible-playbook/hosts"
+    regexp: "{{ item.public_ip }}"
+    insertafter: "[webserver]"
+    line: "{{ item.public_ip }}"
   with_items: "{{ ec2.instances }}"
 
 - name: Wait for SSH to come up

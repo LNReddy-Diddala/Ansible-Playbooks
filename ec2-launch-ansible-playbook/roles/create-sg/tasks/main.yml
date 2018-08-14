@@ -1,7 +1,7 @@
 ---
 #roles/create-sg/tasks/main.yml @LNReddy-Diddala
 
-- name: Create a security group
+- name: Create a Security-Group
   ec2_group:
     name: "{{ security_group }}"
     description: Security Group for webserver Servers
